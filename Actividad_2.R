@@ -6,11 +6,11 @@ library(ggplot2)
 library(statmod)
 library(venn)
 #Set work directory
-setwd(dir = "C:/Users/Usuario/Desktop/Master_UIV/1 cuatrimestre/Análisis transcriptómicos de la expresión génica/Actividad/")
+setwd(dir = "C:/Users/...")
 #load raw count matrix
-seqdata = read.delim(file = "GSE60450_Lactation-GenewiseCounts.txt",
-                     row.names = "EntrezGeneID")
-seqdata = seqdata[,2:ncol(seqdata)]
+seqdata = read.delim(file = "metadata.txt",
+                     row.names = "GenID")
+#seqdata = seqdata[,2:ncol(seqdata)] #If first column is not data
 
 # low Metadatos y determinar groups
 sampleinfo = read.delim(file = "metadata.txt")
